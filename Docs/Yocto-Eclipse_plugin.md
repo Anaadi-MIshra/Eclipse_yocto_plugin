@@ -8,24 +8,23 @@
    - Select "Eclipse IDE for C/C++ Developers" and install it.
    - Select "Launch"
 
-
  ---------------------------------------------------------------------------------------------------------------------
-     After this point it is recommended to use a private or any other network connection as your office network could 
-     cause errors in fetching the required libraries and other files.
+   __After this point it is recommended to use a private or any other network connection as your office network could 
+     cause errors in fetching the required libraries and other files.__
  ---------------------------------------------------------------------------------------------------------------------   
 
 ## 1.2 Installing Oxygen Version of Eclipse  
    
-    >   Select "Install New Software" from the "Help" pull-down menu. 
+    - Select "Install New Software" from the "Help" pull-down menu. 
         Select "Oxygen - http://download.eclipse.org/releases/oxygen" from the "Work with:" pull-down menu.
 
-    > Expand the box next to "Linux Tools" and select the following
+    - Expand the box next to "Linux Tools" and select the following
 
          C/C++ Remote (Over TCF/TE) Run/Debug Launcher
          TM Terminal
                             
 
-    > Expand the box next to "Mobile and Device Development" and select the following boxes:
+    - Expand the box next to "Mobile and Device Development" and select the following boxes:
 
          C/C++ Remote (Over TCF/TE) Run/Debug Launcher
          Remote System Explorer User Actions
@@ -34,35 +33,35 @@
          TCF Target Explorer
                             
 
-    > Expand the box next to "Programming Languages" and select the following box:
+    - Expand the box next to "Programming Languages" and select the following box:
 
          C/C++ Development Tools SDK
                             
 
-    > Complete the installation by clicking through appropriate "Next" and "Finish" buttons. 
+    - Complete the installation by clicking through appropriate "Next" and "Finish" buttons. 
 
 ## 1.3 Installing the PLUGIN 
 
-    > Through the same window as above (#1.2), Click "Add..." in the "Work with:" area and in URL section paste "http://downloads.yoctoproject.org/releases/eclipse-plugin/2.6/oxygen"
+    - Through the same window as above (#1.2), Click "Add..." in the "Work with:" area and in URL section paste "http://downloads.yoctoproject.org/releases/eclipse-plugin/2.6/oxygen"
     and can give any name in "Name" field
-    > Check the boxes next to the following:
+    - Check the boxes next to the following:
 
      Yocto Project SDK Plug-in
      Yocto Project Documentation plug-in
                             
-    Complete the remaining software installation steps and then restart the Eclipse IDE to finish the installation of the plug-in. 
+**Complete the remaining software installation steps and then restart the Eclipse IDE to finish the installation of the plug-in.** 
 
 
 <br>
 
+
 # 2 CONFIGURING THE OXYGEN ECLIPSE YOCTO PLUG-IN 
 
-    > Choose "Preferences" from the "Window" menu to display the Preferences Dialog.
-    > Click "Yocto Project SDK" to display the configuration screen. 
+    - Choose "Preferences" from the "Window" menu to display the Preferences Dialog.
+    - Click "Yocto Project SDK" to display the configuration screen. 
 
-        >> Select the toolchain type as "Standalone pre-built Toolchain" 
-        >> For specifying the location of toolchain, select the directory where you have extracted the Extensible Toolchain with the help`
-        of the .sh script i.e. the directory you specified in the below commands.
+        - Select the toolchain type as "Standalone pre-built Toolchain" 
+        - For specifying the location of toolchain, select the directory where you have extracted the Extensible Toolchain                      with the help of the .sh script i.e. the directory you specified in the below commands.
 
         -----------------------------------------------------------------
 
@@ -101,11 +100,11 @@
         Also add  "AC_CONFIG_FILES([Makefile	src/Makefile])" in configure.ac .
 
 
-    #3.2 Building The project
+## 3.2 Building The project
 
         >> To build the project select "Build All" from the "Project" menu. The console should update and you can note the cross-compiler you are using.                             
 
-    #3.3 Starting QEMU in User-Space NFS Mode
+## 3.3 Starting QEMU in User-Space NFS Mode
 
  >To start the QEMU emulator from within Eclipse, follow these steps:
 
@@ -126,8 +125,7 @@
     Click "Run" to launch QEMU. 
 
 
-
-    #3.4 DEBUGGING LIVE OVER QEMU
+## 3.4 DEBUGGING LIVE OVER QEMU
 
         Run > Debug Configurations.. > C/C++ Remote Application
         Now select the local configuration (something with your project name with _gdb_<architectire>).
@@ -136,9 +134,10 @@
 
 
 
-++ References:  https://wiki.yoctoproject.org/wiki/TipsAndTricks/RunningEclipseAgainstBuiltImage
-++              https://www.yoctoproject.org/docs/3.0.2/sdk-manual/sdk-manual.html
-++              https://www.yoctoproject.org/docs/2.6/sdk-manual/sdk-manual.html#oxygen-configuring-the-eclipse-yocto-plug-in
-++              https://elinux.org/images/4/4a/ELCE_Yocto_Plugin_2011_latest.pdf
-++              https://mariapilot.noblogs.org/files/2017/03/w_pacb44-1.pdf
-++              Local screen_shots directory.
+# References:
+1. (https://wiki.yoctoproject.org/wiki/TipsAndTricks/RunningEclipseAgainstBuiltImage)
+2. (https://www.yoctoproject.org/docs/3.0.2/sdk-manual/sdk-manual.html)
+3. (https://www.yoctoproject.org/docs/2.6/sdk-manual/sdk-manual.html#oxygen-configuring-the-eclipse-yocto-plug-in)
+4. (https://elinux.org/images/4/4a/ELCE_Yocto_Plugin_2011_latest.pdf)
+5. (https://mariapilot.noblogs.org/files/2017/03/w_pacb44-1.pdf)
+6. Local screen_shots directory.
